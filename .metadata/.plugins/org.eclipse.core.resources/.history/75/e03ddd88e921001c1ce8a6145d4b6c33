@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<String> str = new ArrayList<>();
+		
+		str.add("aAaA");
+		str.add("AaA");
+		str.add("aAa");
+		str.add("AAaa");
+		Collections.sort(str);
+		
+		System.out.println(str);
+
+	}
+
+}

@@ -1,0 +1,46 @@
+//Order Not Matters And No Auxiliary Space
+
+package Arrays;
+
+import java.util.Scanner;
+
+public class MoveNegetiveBeginning2 {
+
+	public static void shiftAll(int[] arr, int n) {
+		int left = 0;
+		int right = n - 1;
+
+		int mid = left + (right - 1) / 2;
+		
+		RearrangePosNeg(arr, left, mid);
+		RearrangePosNeg(arr, mid + 1, right);
+		
+		merge(arr, left, mid, right);
+	}
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+
+		int n = scn.nextInt();
+
+		int arr[] = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			arr[i] = scn.nextInt();
+		}
+
+		shiftAll(arr, n);
+
+		StringBuffer str = new StringBuffer();
+
+		for (int i = 0; i < n; i++) {
+			str.append(arr[i] + " ");
+		}
+
+		System.out.println(str);
+
+		scn.close();
+
+	}
+
+}

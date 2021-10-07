@@ -1,0 +1,17 @@
+package Arrays;
+
+public class MaxMinInArray {
+	
+	class pair{
+		int min;
+		int max;
+	}
+
+	static Pair getMinMax()
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
